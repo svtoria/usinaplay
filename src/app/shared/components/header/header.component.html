@@ -1,0 +1,34 @@
+<ion-menu content-id="main-content">
+    <app-menu-content></app-menu-content>
+</ion-menu>
+
+<ion-header id="main-content">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button color="tertiary"></ion-menu-button>
+        </ion-buttons>
+        <ion-img class="logo" src="assets/imgs/header/logo.png" />
+        <app-notifications slot="end" />
+    </ion-toolbar>
+
+    <ion-toolbar>
+        <div class="user-profile">
+            <img class="user-image" src="assets/imgs/header/user.jpeg" alt="" />
+            <div>
+                <p class="user-name">Leonardo Santos</p>
+                <p class="user-level">Nível Roxo</p>
+            </div>
+        </div>
+
+        <div class="nav-bar flex-center">
+            <div class="flex-center">
+                <ion-icon name="accessibility" class="icon" />
+                <p>MEU CORPO</p>
+            </div>
+            <div class="flex-center">
+                <ion-icon name="trophy" class="icon" />
+                <p>OBJETIVOS E CONQUISTAS</p>
+            </div>
+        </div>
+    </ion-toolbar>
+</ion-header>

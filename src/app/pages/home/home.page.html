@@ -1,0 +1,13 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+    @if(contents()) {
+    <app-contents-swiper [title]="'Personal'" [canAddNewContents]="true" [contents]="personal()" />
+    <app-contents-swiper [title]="'Programas'" [hasNewContents]="true" [contents]="programs()" />
+    <app-contents-swiper [title]="'Conteúdos'" [contents]="allContents()" />
+    } @else {
+    <div class="loading-section">
+        <ion-spinner name="dots" color="primary"></ion-spinner>
+    </div>
+    }
+</ion-content>

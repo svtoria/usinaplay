@@ -1,0 +1,19 @@
+<ion-card>
+    <img class="card-image" [src]="content()?.img" alt="Thumbnail do conteúdo" />
+
+    @if (content()?.type === 'content') {
+        <ion-card-content class="card-content">
+            @if (content()?.alreadyWatched) {
+                <ion-card-subtitle color="primary">continuar treinando</ion-card-subtitle>
+            }
+            <ion-card-title color="tertiary">{{ content()?.title }}</ion-card-title>
+        </ion-card-content>
+    }
+
+    @if (content()?.type === 'newContent') {
+        <ion-card-content class="new-content">
+            <ion-icon name="add-circle-outline" color="tertiary" />
+            <ion-card-title color="tertiary"> NOVO <br />TREINO </ion-card-title>
+        </ion-card-content>
+    }
+</ion-card>

@@ -1,0 +1,24 @@
+<section class="cards-category">
+    <div class="category-header">
+        <p class="category-title">{{ title() }}</p>
+        @if (hasNewContents()) {
+            <ion-badge>Novo</ion-badge>
+        }
+        @if (canAddNewContents()) {
+            <ion-icon name="add-circle-outline" color="primary" />
+        }
+    </div>
+    <swiper-container
+        space-between="12"
+        slides-per-view="1.5"
+        observer="true"
+        observer-slide-children="true"
+        slides-offset-before="30"
+        slides-offset-after="30">
+        @for (content of contents(); track $index) {
+            <swiper-slide>
+                <app-content-card [content]="content" />
+            </swiper-slide>
+        }
+    </swiper-container>
+</section>
